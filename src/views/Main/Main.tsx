@@ -1,14 +1,14 @@
 import style from './style.module.scss';
+// @ts-ignore
+import Filter from '../../components/Filter/Filter.tsx';
 
 
 const Main = ({database}) => {
-console.log(database)
+    const tags = database.map(item => item.tag );
+    const set = Array.from(new Set(tags))
     return (
         <main className={style.main}>
-
-
-            <h1>kekis</h1>
-
+            <Filter tags={set} />
         </main>
     )
 }
