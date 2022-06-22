@@ -1,0 +1,63 @@
+@use '../../colors';
+@use '../../screenParameters';
+$header-height:51.5vh;
+$header-desktop-size: 4.5rem;
+$header-mobile-size: 3.5rem;
+$content-width: 1170px;
+
+
+
+.header {
+    background-color: colors.$header-background;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: colors.$default-color;
+
+    .header__navigation {
+        display: flex;
+        align-items: center;
+        gap: 10vw;
+        margin-top: 16px;
+        justify-content: space-between;
+        margin-bottom: 50px;
+
+
+        button {
+            background:none;
+            border: 1px solid colors.$button-border-color;
+            color: colors.$default-color;
+            font-family: 'Epilogue-Black', sans-serif;
+            align-self: stretch;
+            border-radius: 5px;
+            padding: 14px 36px;
+            @include screenParameters.mobile {
+                display: none
+            }
+        }
+    }
+
+    h1 {
+        font-size: $header-desktop-size;
+        @include screenParameters.mobile {
+            font-size: $header-mobile-size ;
+        }
+        font-family: 'Epilogue-Regular', sans-serif;
+    }
+    span {
+        font-family: 'Epilogue-Regular', sans-serif;
+        color: colors.$description-color;
+        width: 50vw;
+        @include screenParameters.mobile {
+            width: 70vw
+        }
+        text-align: center;
+        line-height: 32px;
+        margin-bottom: 65px;
+        
+    }
+}
+
+
+
+

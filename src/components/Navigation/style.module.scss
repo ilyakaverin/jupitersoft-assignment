@@ -1,0 +1,20 @@
+@use '../../colors';
+@use '../../screenParameters';
+
+  .header__menu {
+
+    display: flex;
+    gap:8.4vw;
+    flex-basis: 70%;
+    @include screenParameters.mobile {
+        display: none;
+    }
+    
+    .link {
+        color: colors.$default-color;
+        text-decoration: none;
+        font-family: 'Epilogue-Regular';
+    }
+
+  }
+
