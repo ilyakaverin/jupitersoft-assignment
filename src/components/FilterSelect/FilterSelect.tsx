@@ -2,7 +2,7 @@ import style from "./style.module.scss";
 import { nanoid } from "nanoid";
 
 const FilterSelect = ({ tags, select, hook }) => {
-  const handleFilter = (e) => {
+  const handleFilter = (e):void => {
     select(e.target.value, hook);
   };
   return (

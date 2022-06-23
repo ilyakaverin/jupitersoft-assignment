@@ -1,4 +1,9 @@
-export const links = [
+interface Link {
+    id: number,
+    href: string
+    text: string
+}
+export const links: Link[] = [
   {
     id: 1,
     href: "#",

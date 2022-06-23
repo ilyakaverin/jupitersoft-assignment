@@ -1,5 +1,6 @@
 import style from "./style.module.scss";
 import { ReactComponent as Logo } from "../../assets/Frame.svg";
+// @ts-ignore
 import Navigation from "../../components/Navigation/Navigation.tsx";
 
 const Header = ({ name, description }) => {
