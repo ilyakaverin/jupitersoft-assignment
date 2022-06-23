@@ -2,7 +2,7 @@
 
 This project was bootstrapped with Create React App
 
-![Website](https://imgur.com/a/JWhn59A)
+![Website](/src/assets/readme.png)
 
 ## Available Scripts
 
