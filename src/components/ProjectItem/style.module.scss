@@ -1,0 +1,46 @@
+@use '../../colors';
+@use '../../screenParameters';
+
+.main__projectItem {
+    width: fit-content;
+    outline: 0;
+    
+    @include screenParameters.largeDesktop {
+        flex: 1 0 21%;
+    }
+    position: relative;
+    font-family: 'Epilogue-Regulas', sans-serif;
+
+    
+    picture {
+        position: relative;
+    }
+    img {
+        border: 5px  solid transparent;
+        max-width: 100%;
+        object-fit: cover;
+        
+    }
+    .selected {
+        border: 5px  solid colors.$selected;
+        border-radius: 10px;
+    }
+    span {
+        position: absolute;
+    }
+    .main__projectItem_tag {
+        bottom: 30%;
+        left: 13%;
+        background-color: colors.$default-color;
+        padding: 10px;
+        border-radius: 15px;
+    }
+    .main__projectItem_name {
+        left: 13%;
+        bottom: 13%;
+        color: colors.$default-color;
+        font-size: 2.5rem;
+    }
+
+    
+}
