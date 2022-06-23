@@ -1,10 +1,17 @@
-@use '../../colors';
+@use "../../colors";
 
 .main__filter_filterButton {
-    background: none;
-    border: none;
-    font-family: 'Epilogue-Regular', sans-serif;
-    color: colors.$filter-color;
-    cursor: pointer;
-    
+  background: none;
+  border: none;
+  font-family: "Epilogue-Regular", sans-serif;
+  color: colors.$filter-color;
+  cursor: pointer;
+}
+.main__projectItem_filterButton {
+  position: absolute;
+  bottom: 30%;
+  left: 13%;
+  background-color: colors.$default-color;
+  padding: 10px 15px;
+  border-radius: 15px;
 }

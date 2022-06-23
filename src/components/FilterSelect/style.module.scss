@@ -1,0 +1,21 @@
+@use "../../screenParameters";
+@use "../../colors";
+$selectWidth: 370px;
+
+.main__filter_select {
+  display: none;
+  width: $selectWidth;
+  border: 1px solid colors.$select-color;
+  padding: 15px 10px;
+  border-radius: 5px;
+  margin-bottom: 48px;
+  font-family: "Epilogue-Regular", sans-serif;
+  outline: 0;
+  appearance: none;
+  background: url(../../assets/triangle.svg) no-repeat colors.$default-color;
+  background-position: calc(100% - 15px) center;
+
+  @include screenParameters.mobile {
+    display: block;
+  }
+}

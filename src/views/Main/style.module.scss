@@ -1,28 +1,30 @@
-@use '../../colors';
-@use '../../screenParameters';
-
+@use "../../colors";
+@use "../../screenParameters";
 
 .main {
-    background-color: colors.$main-background;
+  background-color: colors.$main-background;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .main__projectItems {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    .main__projectItems {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap:30px;
-        @include screenParameters.mobile {
-            flex-direction: column;
-        }
-        grid-gap: 2vw;
-        margin-bottom: 80px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    @include screenParameters.mobile {
+      flex-direction: column;
     }
+    grid-gap: 2vw;
+    margin-bottom: 80px;
+  }
 
-    .main__filter {
-        margin-bottom: 75px;
-        display: flex;
-        gap: 5vw
+  .main__filter {
+    margin-bottom: 75px;
+    display: flex;
+    @include screenParameters.mobile {
+      display: none;
     }
+    gap: 5vw;
+  }
 }
