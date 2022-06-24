@@ -1,7 +1,18 @@
-import style from './style.module.scss';
+import React from 'react';
 import cn from 'classnames';
+import style from './style.module.scss';
+import { DatabaseElement } from '../../views/Main/service';
 
-const FilterButton = ({tag, click, action, classname}) => {
+interface FilterButton {
+  tag: string
+  click: (number:number) => void
+  select: (category: string, action:React.SetStateAction<DatabaseElement[]>) => void;
+  classname: string
+}
+
+function FilterButton({
+  tag, click, action, classname,
+}) {
   const handleClick = (): void => {
     click && click(tag, action);
   };
@@ -11,5 +22,5 @@ const FilterButton = ({tag, click, action, classname}) => {
       {tag}
     </button>
   );
-};
+}
 export default FilterButton;

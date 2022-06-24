@@ -1,9 +1,14 @@
+import React from 'react';
 import style from './style.module.scss';
-import {ReactComponent as Logo} from '../../assets/Frame.svg';
-// @ts-ignore
+import { ReactComponent as Logo } from '../../assets/Frame.svg';
 import Navigation from '../../components/Navigation/Navigation.tsx';
 
-const Header = ({name, description}) => {
+interface HeaderProps {
+  name: string,
+  description: string
+}
+
+function Header({ name, description }:HeaderProps) {
   return (
     <header className={style.header}>
       <div className={style.header__navigation}>
@@ -15,5 +20,5 @@ const Header = ({name, description}) => {
       <span>{description}</span>
     </header>
   );
-};
+}
 export default Header;

@@ -1,14 +1,17 @@
-// @ts-nocheck
+import React, { useState, SetStateAction } from 'react';
+import { nanoid } from 'nanoid';
 import style from './style.module.scss';
-import {useState, SetStateAction} from 'react';
-import {nanoid} from 'nanoid';
-import {getTags, getProjectItems, DatabaseElement} from './service.ts';
+import { getTags, getProjectItems, DatabaseElement } from './service.ts';
 import FilterButton from '../../components/FilterButton/FilterButton.tsx';
 import ProjectItem from '../../components/ProjectItem/ProjectItem.tsx';
 import LoadButton from '../../components/LoadButton/LoadButton.tsx';
 import FilterSelect from '../../components/FilterSelect/FilterSelect.tsx';
 
-const Main = ({db}) => {
+type Database = {
+  db: DatabaseElement[]
+}
+
+function Main({ db }:Database) {
   const initRender: DatabaseElement[] = getProjectItems(db, 9);
 
   const [database, setDatabase] = useState<DatabaseElement[]>(db);
@@ -17,22 +20,22 @@ const Main = ({db}) => {
   const uniqueTags: string[] = getTags(database);
 
   const handleDeleteProject = (): void => {
-    setDatabase(prevState => prevState.filter(item => item.id !== selected));
-    setInitItems(prevState => prevState.filter(item => item.id !== selected));
+    setDatabase((prevState) => prevState.filter((item) => item.id !== selected));
+    setInitItems((prevState) => prevState.filter((item) => item.id !== selected));
     setSelected(null);
   };
 
   const loadMore = (itemCount: number): void => {
     const result: DatabaseElement[] = database
-      .filter(elem => !initItems.find(({id}) => elem.id === id))
+      .filter((elem) => !initItems.find(({ id }) => elem.id === id))
       .filter((_, index) => index < itemCount);
-    setInitItems(prevState => [...prevState, ...result]);
+    setInitItems((prevState) => [...prevState, ...result]);
   };
   const tagFilter = (tag: string, action: SetStateAction<DatabaseElement>): void => {
     if (tag === 'Show all') {
       action(database);
     } else {
-      action(() => database.filter(item => item.tag === tag));
+      action(() => database.filter((item) => item.tag === tag));
     }
   };
 
@@ -41,12 +44,12 @@ const Main = ({db}) => {
       <FilterSelect tags={uniqueTags} select={tagFilter} action={setInitItems} />
       <div className={style.main__filter}>
         <FilterButton tag="Show all" click={tagFilter} action={setInitItems} />
-        {uniqueTags.map(tag => (
+        {uniqueTags.map((tag) => (
           <FilterButton key={nanoid()} tag={tag} click={tagFilter} action={setInitItems} />
         ))}
       </div>
       <div className={style.main__projectItems}>
-        {initItems.map(project => (
+        {initItems.map((project) => (
           <ProjectItem
             key={project.id}
             project={project}
@@ -67,5 +70,5 @@ const Main = ({db}) => {
       />
     </main>
   );
-};
+}
 export default Main;

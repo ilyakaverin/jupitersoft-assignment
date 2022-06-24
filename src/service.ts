@@ -3,7 +3,7 @@ interface Link {
   href: string;
   text: string;
 }
-export const links: Link[] = [
+const links: Link[] = [
   {
     id: 1,
     href: '#',
@@ -25,3 +25,4 @@ export const links: Link[] = [
     text: 'Blog',
   },
 ];
+export default links;

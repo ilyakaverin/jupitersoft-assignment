@@ -1,11 +1,22 @@
+import React, { useRef, SetStateAction } from 'react';
 import style from './style.module.scss';
-import {useRef} from 'react';
-//@ts-ignore
+import { DatabaseElement } from '../../views/Main/service.ts';
 import FilterButton from '../FilterButton/FilterButton.tsx';
 
-const ProjectItem = ({project, click, isSelected, pressKey, action, filterClick}) => {
-  const imageWebp = require('../../assets/' + project.srcWebp);
-  const imagePng = require('../../assets/' + project.srcPng);
+interface Props {
+  project: DatabaseElement,
+  click: (argument: null | number) => void,
+  isSelected: number,
+  pressKey: () => void,
+  action: SetStateAction<DatabaseElement[]>,
+  filterClick: () => void
+}
+
+function ProjectItem({
+  project, click, isSelected, pressKey, action, filterClick,
+}:Props) {
+  const imageWebp = require(`../../assets/${project.srcWebp}`);
+  const imagePng = require(`../../assets/${project.srcPng}`);
 
   const divToFocus = useRef(null);
 
@@ -13,7 +24,7 @@ const ProjectItem = ({project, click, isSelected, pressKey, action, filterClick}
     divToFocus.current.focus();
     isSelected === project.id ? click(null) : click(project.id);
   };
-  const onKeyPressed = e => {
+  const onKeyPressed = (e) => {
     if (e.key === 'Delete') pressKey();
   };
 
@@ -38,5 +49,5 @@ const ProjectItem = ({project, click, isSelected, pressKey, action, filterClick}
       <span className={style.main__projectItem_name}>{project.name}</span>
     </div>
   );
-};
+}
 export default ProjectItem;

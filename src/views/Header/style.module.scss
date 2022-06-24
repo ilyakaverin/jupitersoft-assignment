@@ -30,6 +30,7 @@ $content-width: 1170px;
       align-self: stretch;
       border-radius: 5px;
       padding: 14px 36px;
+      cursor: pointer;
       @include screenParameters.mobile {
         display: none;
       }
