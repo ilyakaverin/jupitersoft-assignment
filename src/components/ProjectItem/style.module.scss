@@ -8,18 +8,16 @@
   position: relative;
   font-family: 'Epilogue-Regulas', sans-serif;
   @include screenParameters.largeDesktop {
-    flex: 1 0 21% ;
+    flex: 1 0 21%;
   }
-  
 
   picture {
     position: relative;
   }
   img {
     border: 5px solid transparent;
-    width: 100%;
+    max-width: 100%;
     object-fit: cover;
-  
   }
   .selected {
     border: 5px solid colors.$selected;
@@ -42,11 +40,7 @@
     font-size: 2.5rem;
   }
 }
-.main__projectItem:last-child {
-  @include screenParameters.largeDesktop {
-    flex: 0 0 21% ;
-  }
-}
+
 @keyframes fade {
   0% {
     opacity: 0;
