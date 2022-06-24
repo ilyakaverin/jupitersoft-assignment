@@ -10,7 +10,7 @@
   .main__projectItems {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content:space-around;
     gap: 30px;
     @include screenParameters.mobile {
       flex-direction: column;
