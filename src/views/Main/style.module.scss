@@ -10,11 +10,14 @@
   .main__projectItems {
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-around;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5vw;
     gap: 30px;
     @include screenParameters.mobile {
       flex-direction: column;
     }
+    
     grid-gap: 2vw;
     margin-bottom: 80px;
   }

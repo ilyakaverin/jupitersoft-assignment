@@ -5,20 +5,21 @@
   width: fit-content;
   outline: 0;
   animation: fade 2s ease;
-
-  @include screenParameters.largeDesktop {
-    flex: 1 0 21%;
-  }
   position: relative;
   font-family: 'Epilogue-Regulas', sans-serif;
+  @include screenParameters.largeDesktop {
+    flex: 1 0 21% ;
+  }
+  
 
   picture {
     position: relative;
   }
   img {
     border: 5px solid transparent;
-    max-width: 100%;
+    width: 100%;
     object-fit: cover;
+  
   }
   .selected {
     border: 5px solid colors.$selected;
@@ -39,6 +40,11 @@
     bottom: 13%;
     color: colors.$default-color;
     font-size: 2.5rem;
+  }
+}
+.main__projectItem:last-child {
+  @include screenParameters.largeDesktop {
+    flex: 0 0 21% ;
   }
 }
 @keyframes fade {
