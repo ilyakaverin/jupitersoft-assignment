@@ -14,7 +14,7 @@ function Header({ name, description }:HeaderProps) {
       <div className={style.header__navigation}>
         <Logo />
         <Navigation />
-        <button>CONTACT</button>
+        <button type="button" className={style.header__navigation_contact}>CONTACT</button>
       </div>
       <h1>{name}</h1>
       <span>{description}</span>

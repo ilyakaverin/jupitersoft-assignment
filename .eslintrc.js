@@ -3,16 +3,16 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  "overrides": [
+  overrides: [
     {
-      "files": ["*.ts", "*.tsx", "*.js","*.jsx"],
-      "extends": [
-        "plugin:@typescript-eslint/eslint-recommended",
-        "plugin:@typescript-eslint/recommended",
+      files: ['*.ts', '*.tsx', '*.js', '*.jsx'],
+      extends: [
+        'plugin:@typescript-eslint/eslint-recommended',
+        'plugin:@typescript-eslint/recommended',
       ],
-      "parser": "@typescript-eslint/parser",
-      "plugins": ["@typescript-eslint"]
-    }
+      parser: '@typescript-eslint/parser',
+      plugins: ['@typescript-eslint'],
+    },
   ],
   extends: [
     'plugin:react/recommended',

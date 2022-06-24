@@ -1,5 +1,5 @@
+import React from 'react';
 import style from './style.module.scss';
-// @ts-ignore
 import links from '../../service.ts';
 
 function Navigation() {

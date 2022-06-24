@@ -1,7 +1,7 @@
 import React from 'react';
 import { nanoid } from 'nanoid';
 import style from './style.module.scss';
-import { DatabaseElement } from '../../views/Main/service';
+import { DatabaseElement } from '../../views/Main/service.ts';
 
 interface SelectProps {
   tags: string[]

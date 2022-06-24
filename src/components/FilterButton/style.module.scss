@@ -8,6 +8,7 @@
   color: colors.$filter-color;
   cursor: pointer;
 }
+
 .main__projectItem_filterButton {
   position: absolute;
   bottom: 30%;
@@ -17,4 +18,7 @@
   border-radius: 15px;
   @include screenParameters.largeDesktop {
   }
+}
+.main__filter_filterButton:hover {
+  color: colors.$selected
 }
