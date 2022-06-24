@@ -17,7 +17,7 @@
   img {
     border: 5px solid transparent;
     max-width: 100%;
-    object-fit: cover;
+ 
   }
   .selected {
     border: 5px solid colors.$selected;
@@ -47,5 +47,10 @@
   }
   100% {
     opacity: 1;
+  }
+}
+.main__projectItem:last-child {
+  @include screenParameters.largeDesktop {
+    flex: 0 0 21%;
   }
 }
