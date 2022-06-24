@@ -4,6 +4,8 @@
 .header__menu {
   display: flex;
   gap: 8.4vw;
+  width: fit-content;
+  justify-content: center;
   flex-basis: 70%;
   @include screenParameters.mobile {
     display: none;

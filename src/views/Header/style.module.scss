@@ -16,10 +16,15 @@ $content-width: 1170px;
   .header__navigation {
     display: flex;
     align-items: center;
-    gap: 10vw;
+    flex-wrap: wrap;
     margin-top: 16px;
     justify-content: space-between;
     margin-bottom: 50px;
+    width: 1170px;
+    @include screenParameters.mobile {
+      max-width: 100%;
+      justify-content: center;
+    }
 
     button {
       background: none;

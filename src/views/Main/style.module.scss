@@ -6,20 +6,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 
   .main__projectItems {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
+    max-width: 1170px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:30px;
+
+
     @include screenParameters.mobile {
       flex-direction: column;
+      grid-template-columns: 1fr;
     }
     @include screenParameters.largeDesktop {
-      justify-content: flex-start;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 2vw;
     }
-
-    grid-gap: 2vw;
     margin-bottom: 80px;
   }
 
