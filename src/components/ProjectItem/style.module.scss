@@ -1,5 +1,5 @@
-@use "../../sccs-partials/colors";
-@use "../../sccs-partials/screenParameters";
+@use '../../sccs-partials/colors';
+@use '../../sccs-partials/screenParameters';
 
 .main__projectItem {
   width: fit-content;
@@ -10,7 +10,7 @@
     flex: 1 0 21%;
   }
   position: relative;
-  font-family: "Epilogue-Regulas", sans-serif;
+  font-family: 'Epilogue-Regulas', sans-serif;
 
   picture {
     position: relative;

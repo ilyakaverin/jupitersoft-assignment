@@ -1,5 +1,5 @@
-@use "../../sccs-partials/colors";
-@use "../../sccs-partials/screenParameters";
+@use '../../sccs-partials/colors';
+@use '../../sccs-partials/screenParameters';
 
 .header__menu {
   display: flex;
@@ -12,6 +12,6 @@
   .link {
     color: colors.$default-color;
     text-decoration: none;
-    font-family: "Epilogue-Regular";
+    font-family: 'Epilogue-Regular';
   }
 }

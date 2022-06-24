@@ -1,9 +1,9 @@
-@use "../../sccs-partials/colors";
+@use '../../sccs-partials/colors';
 
 .main__button {
   background-color: colors.$default-color;
   border: none;
-  font-family: "Epilogue-Regular", sans-serif;
+  font-family: 'Epilogue-Regular', sans-serif;
   color: colors.$filter-color;
   padding: 25px 36px;
   border-radius: 10px;

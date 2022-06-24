@@ -1,26 +1,25 @@
 @font-face {
-  font-family: "Epilogue-ExtraBold";
+  font-family: 'Epilogue-ExtraBold';
   font-style: normal;
   font-weight: normal;
-  src: local("Epilogue-ExtraBold"),
-    url("./Fonts/Epilogue/static/Epilogue-ExtraBold.woff2") format("woff2"),
-    url("./Fonts//Epilogue/static/Epilogue-ExtraBold.ttf") format("truetype");
+  src: local('Epilogue-ExtraBold'),
+    url('./Fonts/Epilogue/static/Epilogue-ExtraBold.woff2') format('woff2'),
+    url('./Fonts//Epilogue/static/Epilogue-ExtraBold.ttf') format('truetype');
 }
 @font-face {
-  font-family: "Epilogue-Regular";
+  font-family: 'Epilogue-Regular';
   font-style: normal;
   font-weight: normal;
-  src: local("Epilogue-Regular"),
-    url("./Fonts/Epilogue/static/Epilogue-Regular.woff2") format("woff2"),
-    url("./Fonts//Epilogue/static/Epilogue-Regular.ttf") format("truetype");
+  src: local('Epilogue-Regular'),
+    url('./Fonts/Epilogue/static/Epilogue-Regular.woff2') format('woff2'),
+    url('./Fonts//Epilogue/static/Epilogue-Regular.ttf') format('truetype');
 }
 @font-face {
-  font-family: "Epilogue-Black";
+  font-family: 'Epilogue-Black';
   font-style: normal;
   font-weight: normal;
-  src: local("Epilogue-Black"),
-    url("./Fonts/Epilogue/static/Epilogue-Black.woff2") format("woff2"),
-    url("./Fonts//Epilogue/static/Epilogue-Black.ttf") format("truetype");
+  src: local('Epilogue-Black'), url('./Fonts/Epilogue/static/Epilogue-Black.woff2') format('woff2'),
+    url('./Fonts//Epilogue/static/Epilogue-Black.ttf') format('truetype');
 }
 
 body {

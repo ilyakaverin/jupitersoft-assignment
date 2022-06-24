@@ -1,18 +1,11 @@
-import style from "./style.module.scss";
-import { useRef } from "react";
+import style from './style.module.scss';
+import {useRef} from 'react';
 //@ts-ignore
-import FilterButton from "../FilterButton/FilterButton.tsx";
+import FilterButton from '../FilterButton/FilterButton.tsx';
 
-const ProjectItem = ({
-  project,
-  click,
-  isSelected,
-  pressKey,
-  action,
-  filterClick,
-}) => {
-  const imageWebp = require("../../assets/" + project.srcWebp);
-  const imagePng = require("../../assets/" + project.srcPng);
+const ProjectItem = ({project, click, isSelected, pressKey, action, filterClick}) => {
+  const imageWebp = require('../../assets/' + project.srcWebp);
+  const imagePng = require('../../assets/' + project.srcPng);
 
   const divToFocus = useRef(null);
 
@@ -20,21 +13,16 @@ const ProjectItem = ({
     divToFocus.current.focus();
     isSelected === project.id ? click(null) : click(project.id);
   };
-  const onKeyPressed = (e) => {
-    if (e.key === "Delete") pressKey();
+  const onKeyPressed = e => {
+    if (e.key === 'Delete') pressKey();
   };
 
   return (
-    <div
-      onKeyDown={onKeyPressed}
-      tabIndex={0}
-      ref={divToFocus}
-      className={style.main__projectItem}
-    >
+    <div onKeyDown={onKeyPressed} tabIndex={0} ref={divToFocus} className={style.main__projectItem}>
       <picture>
         <source srcSet={imagePng} type="image/png" />
         <img
-          className={isSelected === project.id ? style.selected : ""}
+          className={isSelected === project.id ? style.selected : ''}
           onClick={handleClick}
           src={imageWebp}
           alt={project.name}

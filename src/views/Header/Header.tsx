@@ -1,9 +1,9 @@
-import style from "./style.module.scss";
-import { ReactComponent as Logo } from "../../assets/Frame.svg";
+import style from './style.module.scss';
+import {ReactComponent as Logo} from '../../assets/Frame.svg';
 // @ts-ignore
-import Navigation from "../../components/Navigation/Navigation.tsx";
+import Navigation from '../../components/Navigation/Navigation.tsx';
 
-const Header = ({ name, description }) => {
+const Header = ({name, description}) => {
   return (
     <header className={style.header}>
       <div className={style.header__navigation}>

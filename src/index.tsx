@@ -1,22 +1,21 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
 // style
-import "normalize.css";
-import "./index.css";
+import 'normalize.css';
+import './index.css';
 
 // fonts
-import "./Fonts/Epilogue/static/Epilogue-ExtraBold.woff2";
-import "./Fonts/Epilogue/static/Epilogue-ExtraBold.ttf";
-import "./Fonts/Epilogue/static/Epilogue-Regular.woff2";
-import "./Fonts/Epilogue/static/Epilogue-Regular.ttf";
-import "./Fonts/Epilogue/static/Epilogue-Black.woff2";
-import "./Fonts/Epilogue/static/Epilogue-Black.ttf";
+import './Fonts/Epilogue/static/Epilogue-ExtraBold.woff2';
+import './Fonts/Epilogue/static/Epilogue-ExtraBold.ttf';
+import './Fonts/Epilogue/static/Epilogue-Regular.woff2';
+import './Fonts/Epilogue/static/Epilogue-Regular.ttf';
+import './Fonts/Epilogue/static/Epilogue-Black.woff2';
+import './Fonts/Epilogue/static/Epilogue-Black.ttf';
 // @ts-ignore
-import App from "./App.tsx";
+import App from './App.tsx';
 
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
