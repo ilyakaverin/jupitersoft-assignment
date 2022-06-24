@@ -1,9 +1,9 @@
 import style from "./style.module.scss";
 import { nanoid } from "nanoid";
 
-const FilterSelect = ({ tags, select, hook }) => {
+const FilterSelect = ({ tags, select, action}) => {
   const handleFilter = (e):void => {
-    select(e.target.value, hook);
+    select(e.target.value, action);
   };
   return (
     <select

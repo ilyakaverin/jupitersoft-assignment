@@ -1,4 +1,4 @@
-export interface Database {
+export interface DatabaseElement {
   id: number;
   tag: string;
   name: string;
@@ -6,12 +6,12 @@ export interface Database {
   srcPng: string;
 }
 
-export const getTags = (database: Database[]): string[] => {
-  const databaseTags = database.map((item) => item.tag);
+export const getTags = (database: DatabaseElement[]): string[] => {
+  const databaseTags:string[] = database.map((item) => item.tag);
 
   return Array.from(new Set(databaseTags));
 };
 export const getProjectItems = (
-  database: Database[],
+  database: DatabaseElement[],
   count: number
-): Database[] => database.filter((item) => item.id <= count);
+): DatabaseElement[] => database.filter((item) => item.id <= count);

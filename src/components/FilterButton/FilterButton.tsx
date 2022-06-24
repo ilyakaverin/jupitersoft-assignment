@@ -1,9 +1,9 @@
 import style from "./style.module.scss";
 import cn from "classnames";
 
-const FilterButton = ({ tag, click, hook, classname }) => {
+const FilterButton = ({ tag, click, action, classname }) => {
   const handleClick = (): void => {
-    click && click(tag, hook);
+    click && click(tag, action);
   };
 
   return (

@@ -8,7 +8,7 @@ const ProjectItem = ({
   click,
   isSelected,
   pressKey,
-  hook,
+  action,
   filterClick,
 }) => {
   const imageWebp = require("../../assets/" + project.srcWebp);
@@ -45,7 +45,7 @@ const ProjectItem = ({
         classname="main__projectItem_filterButton"
         tag={project.tag}
         click={filterClick}
-        hook={hook}
+        action={action}
       />
       <span className={style.main__projectItem_name}>{project.name}</span>
     </div>
