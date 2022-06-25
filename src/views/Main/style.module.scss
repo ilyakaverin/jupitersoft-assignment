@@ -1,0 +1,38 @@
+@use '../../sccs-partials/colors';
+@use '../../sccs-partials/screenParameters';
+
+.main {
+  background-color: colors.$main-background;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+
+  .main__projectItems {
+    max-width: 1170px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:30px;
+
+
+    @include screenParameters.mobile {
+      flex-direction: column;
+      grid-template-columns: 1fr;
+    }
+    @include screenParameters.largeDesktop {
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 2vw;
+    }
+    margin-bottom: 80px;
+  }
+
+  .main__filter {
+    margin-bottom: 75px;
+    display: flex;
+    margin-top: 85px;
+    @include screenParameters.mobile {
+      display: none;
+    }
+    gap: 5vw;
+  }
+}

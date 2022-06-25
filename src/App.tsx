@@ -1,25 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './views/Header/Header';
+import Main from './views/Main/Main';
+import database from './database';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header
+        name="Portfolio"
+        description="Agency provides a full service range including technical skills, design, business understanding."
+      />
+      <Main db={database} />
+    </>
   );
 }
 

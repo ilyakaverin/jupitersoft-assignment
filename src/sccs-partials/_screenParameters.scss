@@ -1,0 +1,13 @@
+$screen-width: 1040px;
+$wideScreen-width: 1600px;
+
+@mixin mobile {
+  @media (max-width: #{$screen-width}) {
+    @content;
+  }
+}
+@mixin largeDesktop {
+  @media (min-width: #{$wideScreen-width}) {
+    @content;
+  }
+}
